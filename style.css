@@ -1,0 +1,60 @@
+*{
+    margin:0px;
+    padding:0px;
+}
+body{
+    background-color: #121212;
+    color:#ffffff;
+    font-family: 'Courier New', Courier, monospace;
+}
+header{
+    width:100%;
+    background-image: url(Untitled.jpg);
+    height: 110vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+header nav{
+    display: flex;
+    justify-content: right;
+}
+header nav ul li{
+    display: inline-block;
+    color:white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 13px 45px;
+    font-size: 20px;
+}
+header nav ul li:hover{
+    background-color: rgba(50, 50, 50, 0.411);
+    color:#106e70;
+    transition: 0.4s;
+    box-shadow: -6px 3px teal;
+}
+header nav ul li:not(:hover){
+    background-color: none;
+    box-shadow: 0px 0px teal;
+    color: rgb(163, 163, 163);
+    transition: 0.2s;
+}
+header h1{
+    display: inline-block;
+    margin:50px;
+    padding:50px;
+    position: absolute;
+    top:25%;
+    font-size:50px;
+}
+header h1 span{
+    display: inline-block;
+    color:#106e70;
+    margin: 40px 0px;
+    cursor: pointer;
+}
+header h1 span:hover{
+    letter-spacing: 25px;
+    transition: 0.5s;
+}header h1 span:not(:hover){
+    letter-spacing: 0px;
+    transition: 0.5s;
+}
