@@ -14,47 +14,103 @@ header{
     background-repeat: no-repeat;
     background-size: cover;
 }
-header nav{
-    display: flex;
+header nav{font-family: sans-serif;
+    display:flex;
     justify-content: right;
+    align-items: center;
+    padding-right: 10%;
+}
+header nav ul{
+    display: flex;
+    list-style: none;
 }
 header nav ul li{
-    display: inline-block;
-    color:white;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    padding: 13px 45px;
-    font-size: 20px;
+    padding: 10px 15px;
+    margin: 10px 20px;
+    position: relative;
 }
-header nav ul li:hover{
-    background-color: rgba(50, 50, 50, 0.411);
-    color:#106e70;
-    transition: 0.4s;
-    box-shadow: -6px 3px teal;
+header nav ul li::before,
+header nav ul li::after{
+    position: absolute;
+    content: '';
+    width:0px;
+    height: 2px;
+    background-color: #fff;
+    transition: 0.3s all ease-in-out;
 }
-header nav ul li:not(:hover){
-    background-color: none;
-    box-shadow: 0px 0px teal;
-    color: rgb(163, 163, 163);
-    transition: 0.2s;
+header nav ul li::before{
+    top: 0;
+    left: 0;
+}
+header nav ul li:hover::before{
+    right: 0;
+    left: auto;
+    width: 100%;
+    background-color: teal;
+}   
+header nav ul li::after{
+    bottom: 0;
+    right: 0;
+}
+header nav ul li:hover::after{
+    right: auto;
+    left: 0;
+    width: 100%;
+    background-color: teal;
+}   
+header nav ul li a{
+    text-decoration: none;
+    cursor: pointer;
+    color:#fff;
+    font-size: 20px ;
+    transition: 0.3s all ease-in-out;
+}
+header nav ul li:hover a{
+    color:teal;
 }
 header h1{
+    box-shadow:0 2px 5px 0 rgba(0, 0, 0, 0.318), 0 2px 10px 0 rgba(0, 0, 0, 0.23);
     display: inline-block;
     margin:50px;
     padding:50px;
     position: absolute;
     top:25%;
     font-size:50px;
+    border-radius: 10px;
 }
+header h1:hover{
+    cursor: pointer;
+    border-radius:25px;
+    background-color: #1212124b;
+    transition: 0.4s;
+}
+header h1:not(:hover){
+    transition: 0.4s;
+}
+
 header h1 span{
     display: inline-block;
     color:#106e70;
+    border-radius: 3px;
     margin: 40px 0px;
     cursor: pointer;
 }
+header h1:hover span{
+    letter-spacing: 5px;
+    padding:15px;
+    transition: 0.5s;
+    background-color: rgba(50, 50, 50, 0.774);
+    color:#106e70;
+    transition: 0.4s;
+    box-shadow: -10px 10px teal;
+}
+header h1:not(:hover) span{
+    letter-spacing: 3px;
+    transition: 0.5s;
+}
 header h1 span:hover{
-    letter-spacing: 25px;
-    transition: 0.5s;
+    transition: 0.4s;
+    box-shadow: -10px 10px rgb(0, 86, 86);
 }header h1 span:not(:hover){
-    letter-spacing: 0px;
-    transition: 0.5s;
+    transition: 0.4s;
 }
