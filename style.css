@@ -5,20 +5,35 @@
 body{
     background-color: #121212;
     color:#ffffff;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Barlow Condensed', sans-serif;
+    /* font-family: 'Asap Condensed', sans-serif; */
+    /* font-family: 'Poiret One', sans-serif; */
 }
 header{
     width:100%;
-    background-image: url(Untitled.jpg);
+    background-image: url(header.jpg);
     height: 110vh;
     background-repeat: no-repeat;
     background-size: cover;
 }
-header nav{font-family: sans-serif;
+header nav{
+    width: 100%;
+    font-family: "Antonio";
     display:flex;
+    position: fixed;
+    right: 0;
     justify-content: right;
     align-items: center;
     padding-right: 10%;
+    background-color: #12121230;
+}
+header nav:hover{
+    background-color: #000000a2;
+    transition: 0.6s;
+}
+header nav:not(:hover){
+    background-color: #12121230;
+    transition: 0.3s;
 }
 header nav ul{
     display: flex;
@@ -62,7 +77,7 @@ header nav ul li a{
     text-decoration: none;
     cursor: pointer;
     color:#fff;
-    font-size: 20px ;
+    font-size: 22px ;
     transition: 0.3s all ease-in-out;
 }
 header nav ul li:hover a{
@@ -77,6 +92,7 @@ header h1{
     top:25%;
     font-size:50px;
     border-radius: 10px;
+    font-family: "Antonio";
 }
 header h1:hover{
     cursor: pointer;
@@ -94,9 +110,11 @@ header h1 span{
     border-radius: 3px;
     margin: 40px 0px;
     cursor: pointer;
+    font-size: 55px;
+    font-family: 'Quicksand', sans-serif;
 }
 header h1:hover span{
-    letter-spacing: 5px;
+    letter-spacing: 10px;
     padding:15px;
     transition: 0.5s;
     background-color: rgba(50, 50, 50, 0.774);
@@ -105,12 +123,79 @@ header h1:hover span{
     box-shadow: -10px 10px teal;
 }
 header h1:not(:hover) span{
-    letter-spacing: 3px;
+    letter-spacing: 5px;
     transition: 0.5s;
 }
 header h1 span:hover{
     transition: 0.4s;
     box-shadow: -10px 10px rgb(0, 86, 86);
-}header h1 span:not(:hover){
+}
+header h1 span:not(:hover){
     transition: 0.4s;
+}
+section.body{
+    height: 1000vh;
+    background-color: #003535;
+    box-shadow: inset 0px 0px 20px 10px rgba(0, 0, 0, 0.6);
+}
+footer{
+    background-color: rgb(36 46 47);
+    background-image: url(footer.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width:90%;
+    padding: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+}
+footer section{
+    box-shadow:0 2px 5px 0 rgba(0, 0, 0, 0.318), 0 2px 10px 0 rgba(0, 0, 0, 0.23);
+    background-color: #1212124b;
+    background-size:contain;
+    font-family: "Antonio";
+    color:rgb(192, 192, 192);
+    word-spacing: 5px;
+    font-size:30px;
+    padding:50px;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+footer section:hover{
+    background-color: #1212124b;
+    transition: 0.4s;
+}
+footer section:not(:hover){
+    background-color: #1212121b;
+    transition: 0.4s;
+}
+footer section ul{
+    list-style: none;
+}
+footer section ul li{
+    list-style: none;
+    display: inline;
+    margin:20px;
+}
+footer section ul li img:hover{
+    cursor: pointer;
+    transition: 0.4s;
+    overflow: hidden;
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+    filter:brightness(100%);
+    -webkit-filter: brightness(100%);
+}
+footer section ul li img:not(:hover){
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    filter:brightness(90%);
+    -webkit-filter: brightness(90%);
+    transition: 0.3s;
+}
+footer section ul li img{
+    width:50px;
+    height: 50px;
 }
