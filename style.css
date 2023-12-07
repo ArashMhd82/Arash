@@ -134,9 +134,115 @@ header h1 span:not(:hover){
     transition: 0.4s;
 }
 section.body{
-    height: 1000vh;
-    background-color: #003535;
+    background-color: #002626;
     box-shadow: inset 0px 0px 20px 10px rgba(0, 0, 0, 0.6);
+    padding:5%;
+    display: inline-flex;
+}
+section.body section.right{
+    width:30%;
+    margin:2%;
+    float: right;
+}
+section.body section.left{
+    width:70%;
+    margin:2%;
+    float: left;
+}
+section.body div.content{
+    background-color: #005252;
+    width:100%;
+    display: inline-flex;
+    flex-direction: column;
+}
+section.body div.content:hover{
+    background-color: #005252;
+    box-shadow: 0px 0px 20px 10px rgba(0, 0, 0, 0.6);
+    width:100%;
+    transition: 0.5s;
+}
+section.body div.content:not(:hover){
+    transition: 0.4s;
+}
+section.body div.content img{
+    width:100%;
+    max-height: 400px;
+}
+section.body div.content div.context{
+    padding:30px;
+    color:whitesmoke
+}
+section.body div.content div.context div.title{
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+section.body div.content div.context div.title::before,
+section.body div.content div.context div.title::after{
+    position: absolute;
+    content: '';
+    width:0px;
+    height: 2px;
+    background-color: #002626;
+    transition: 0.3s all ease-in-out;
+}
+section.body div.content div.context div.title::before{
+    top: 0;
+    left: 0;
+}
+section.body div.content div.context div.title:hover::before{
+    right: 0;
+    left: auto;
+    width: 100%;
+    background-color: #002626;
+}   
+section.body div.content div.context div.title::after{
+    bottom: 0;
+    right: 0;
+}
+section.body div.content div.context div.title:hover::after{
+    right: auto;
+    left: 0;
+    width: 100%;
+    background-color: #002626;
+}
+section.body div.content div.context div.title:hover{
+    color:#002626;
+    transition: 0.4s;
+}
+section.body div.content div.context div.title h2{
+    font-size: 40px;
+    display: inline;
+}
+section.body div.content div.context div.title span{
+    font-size: 20px;
+}
+section.body div.content div.context .description {
+    font-size: 22px;
+    line-height: 27px;
+}
+section.body div.content div.context div.description a{
+text-decoration: none;
+}
+section.body div.content div.context div.description button{
+    padding:20px;
+    cursor: pointer;
+    color:whitesmoke;
+    font-size: 20px;
+    background-color: rgba(0, 0, 128, 0);
+    border: 1px white solid;
+    margin-top:30px;
+}
+
+section.body div.content div.context div.description button:hover{
+    border:1px #002626 solid;
+    transition: 0.4s;
+    background-color: #002626;
+    color:white;
+}
+section.body div.content div.context div.description button:not(:hover){
+    transition: 0.4s;
 }
 footer{
     background-color: rgb(36 46 47);
